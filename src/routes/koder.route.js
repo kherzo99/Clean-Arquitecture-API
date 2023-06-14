@@ -11,8 +11,7 @@ RUTAS
 - Aqui vamos a leer el request y response
 */ 
 
-//Obetner koder 
-//path params -> id -> /koders/:id
+//Enlistar koder 
 router.get("/", async (req, res) => {
     try {
         const koders = await list();
@@ -31,6 +30,7 @@ router.get("/", async (req, res) => {
 });
 
 // Obtener koder por iD. 
+//path params -> id -> /koders/:id
 router.get ("/:id", async (req, res) => {
     try {
         const oneKoder = await get(req.params.id);
