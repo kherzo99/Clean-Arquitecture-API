@@ -5,6 +5,7 @@
 
 //Routes 
 const routerKoder = require("./routes/koder.route");
+const routerMentor = require("./routes/mentor.route");
 const express = require("express")
 const app = express(); 
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Middleware de rutes 
 app.use("/koders", routerKoder ); 
+app.use("/mentors", routerMentor)
 
 
 
