@@ -12,4 +12,12 @@ const list = () => {
     return mentors;
 }
 
-module.exports = { create , list } 
+//Encontar un mentor por su id. 
+const get = (id) => {
+    const getMentor = Mentor.findById(id);
+    return getMentor
+}
+
+
+
+module.exports = { create , list, get } 
