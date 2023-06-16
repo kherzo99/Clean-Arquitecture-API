@@ -3,6 +3,7 @@ const User = require("../models/user.model.js");
 const createError = require("http-errors");
 const jwt = require("../lib/jwt.lib.js")
 
+
 /*
 Registro --> Autenticación 
 */
@@ -41,7 +42,18 @@ const login = async (email, textPlainPassword) => {
     return token;
 }
 
+const list = () => {
+    const users = User.find();
+    return users;
+}
 
-module.exports = { register, login }
+const get = (id) => {
+    const user = User.findById(id);
+    return user;
+}
+
+
+
+module.exports = { register, login, list, get }
 
 // http://localhost:8080/auth 
