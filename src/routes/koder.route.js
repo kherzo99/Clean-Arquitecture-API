@@ -11,7 +11,7 @@ RUTAS
 - Aqui vamos a leer el request y response
 */ 
 
-//Enlistar koders 
+//Enlistar koders
 router.get("/", async (req, res) => {
     try {
         const koders = await list();
